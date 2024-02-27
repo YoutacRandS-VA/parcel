@@ -484,7 +484,7 @@ async function normalizeOptions(
     watchDir: command.watchDir,
     baseWatcherOptions: {
       backend: command.watcherBackend,
-      ignore: command.watcherIgnoreDirs ?? ['.git', '.hg'],
+      ignore: command.watcherIgnoreDirs,
     },
     config: command.config,
     mode,

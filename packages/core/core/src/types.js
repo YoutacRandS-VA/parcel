@@ -32,7 +32,7 @@ import type {Cache} from '@parcel/cache';
 import type {PackageManager} from '@parcel/package-manager';
 import type {ProjectPath} from './projectPath';
 import type {EventType} from '@parcel/watcher';
-import type {WatcherOptions} from '@parcel/types';
+import type {Options as WatcherOptions} from '@parcel/watcher';
 
 export type ParcelPluginNode = {|
   packageName: PackageName,
