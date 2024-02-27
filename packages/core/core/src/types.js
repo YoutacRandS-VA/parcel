@@ -32,6 +32,7 @@ import type {Cache} from '@parcel/cache';
 import type {PackageManager} from '@parcel/package-manager';
 import type {ProjectPath} from './projectPath';
 import type {EventType} from '@parcel/watcher';
+import type {WatcherOptions} from '@parcel/types';
 
 export type ParcelPluginNode = {|
   packageName: PackageName,
@@ -271,10 +272,10 @@ export type ParcelOptions = {|
   defaultConfig?: DependencySpecifier,
   env: EnvMap,
   targets: ?(Array<string> | {+[string]: TargetDescriptor, ...}),
-
   shouldDisableCache: boolean,
   cacheDir: FilePath,
   watchDir: FilePath,
+  baseWatcherOptions: WatcherOptions,
   mode: BuildMode,
   hmrOptions: ?HMROptions,
   shouldContentHash: boolean,

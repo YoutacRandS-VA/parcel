@@ -14,7 +14,7 @@ import type {Cache} from '@parcel/cache';
 
 import type {AST as _AST, ConfigResult as _ConfigResult} from './unsafe';
 import type {TraceMeasurement} from '@parcel/profiler';
-import type {EventType} from '@parcel/watcher';
+import type {EventType, Options as BaseWatcherOptions} from '@parcel/watcher';
 
 /** Plugin-specific AST, <code>any</code> */
 export type AST = _AST;
@@ -285,6 +285,11 @@ export type DetailedReportOptions = {|
   assetsPerBundle?: number,
 |};
 
+export type WatcherOptions = {|
+  ...BaseWatcherOptions,
+  ignore: BaseWatcherOptions['ignore'],
+|};
+
 export type InitialParcelOptions = {|
   +entries?: FilePath | Array<FilePath>,
   +config?: DependencySpecifier,
@@ -295,6 +300,7 @@ export type InitialParcelOptions = {|
   +shouldDisableCache?: boolean,
   +cacheDir?: FilePath,
   +watchDir?: FilePath,
+  +baseWatcherOptions?: WatcherOptions,
   +mode?: BuildMode,
   +hmrOptions?: ?HMROptions,
   +shouldContentHash?: boolean,
