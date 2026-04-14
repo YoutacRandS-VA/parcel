@@ -30,7 +30,7 @@
     "@parcel/logger": "2.12.0",
     "@parcel/package-manager": "2.12.0",
     "@parcel/reporter-cli": "2.12.0",
-    "@parcel/reporter-dev-server": "2.12.0",
+    "@parcel/reporter-dev-server": "2.16.4",
     "@parcel/reporter-tracer": "2.12.0",
     "@parcel/utils": "2.12.0",
     "chalk": "^4.1.0",
